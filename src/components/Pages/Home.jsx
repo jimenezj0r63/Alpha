@@ -15,7 +15,7 @@ import TeamSlider from '../Slider/TeamSlider';
 import VideoModal from '../VideoModal';
 import TimelineSlider from '../Slider/TimelineSlider';
 import { pageTitle } from '../../helper';
-import { BubbleChat } from 'flowise-embed-react'
+
 export default function Home() {
   pageTitle('Home');
 
@@ -265,7 +265,7 @@ export default function Home() {
         />
       </Div>
       {/* End CTA Section */}
-      <BubbleChat chatflowid="94d47b1b-e244-4cce-8cfe-bd2beeeb3ba8" apiHost="http://137.184.227.54:3000" />
+      
     </>
   );
 }
