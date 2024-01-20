@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import SocialWidget from '../Widget/SocialWidget';
 import Newsletter from '../Widget/Newsletter';
@@ -6,6 +6,7 @@ import './header.scss';
 import ContactInfoWidget from '../Widget/ContactInfoWidget';
 import Div from '../Div';
 import DropDown from './DropDown';
+import PropTypes from 'prop-types';
 
 export default function Header({ variant }) {
   const [isSticky, setIsSticky] = useState(false);
@@ -20,6 +21,10 @@ export default function Header({ variant }) {
       }
     });
   }, []);
+  Header.propTypes = {
+    variant: PropTypes.string,
+  };
+  
 
   return (
     <>
@@ -33,7 +38,7 @@ export default function Header({ variant }) {
             <Div className="cs-main_header_in">
               <Div className="cs-main_header_left">
                 <Link className="cs-site_branding" to="/">
-                  <img src="/images/logo.svg" alt="Logo" />
+                  <img src="" alt="ALPHATECH" />
                 </Link>
               </Div>
               <Div className="cs-main_header_center">
@@ -291,7 +296,7 @@ export default function Header({ variant }) {
         <Div className="cs-side_header_in">
           <Div className="cs-side_header_shape" />
           <Link className="cs-site_branding" to="/">
-            <img src="/images/footer_logo.svg" alt="Logo" />
+            <img src="" alt="ALPHATECH" />
           </Link>
           <Div className="cs-side_header_box">
             <h2 className="cs-side_header_heading">

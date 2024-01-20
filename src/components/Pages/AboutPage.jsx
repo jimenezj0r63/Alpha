@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { pageTitle } from '../../helper';
 import Cta from '../Cta';
 import FunFact from '../FunFact';

@@ -1,42 +1,45 @@
-import React from 'react'
-import Div from '../Div'
-import ContactInfoWidget from '../Widget/ContactInfoWidget'
-import MenuWidget from '../Widget/MenuWidget'
-import Newsletter from '../Widget/Newsletter'
-import SocialWidget from '../Widget/SocialWidget'
-import TextWidget from '../Widget/TextWidget'
-import './footer.scss'
+// Importa solo lo que necesitas de React
+import PropTypes from 'prop-types';
+import Div from '../Div';
+import ContactInfoWidget from '../Widget/ContactInfoWidget';
+import MenuWidget from '../Widget/MenuWidget';
+import Newsletter from '../Widget/Newsletter';
+import SocialWidget from '../Widget/SocialWidget';
+import TextWidget from '../Widget/TextWidget';
+import './footer.scss';
 
-export default function Footer({copyrightText, logoSrc, logoAlt, text}) {
+// No necesitas 'React' aquí, puedes eliminarlo
+
+export default function Footer() {
   const copyrightLinks = [
     {
       title: 'Terminos de uso',
-      href: '/'
+      href: '/',
     },
     {
       title: 'Politicas de Privacidad',
-      href: '/'
-    }
-  ]
-  
+      href: '/',
+    },
+  ];
+
   const serviceMenu = [
     {
       title: 'Diseño UI/UX ',
-      href: '/service/service-details'
+      href: '/service/service-details',
     },
     {
       title: 'Desarrollo Web',
-      href: '/service/service-details'
+      href: '/service/service-details',
     },
     {
       title: 'Marketing Digital ',
-      href: '/service/service-details'
+      href: '/service/service-details',
     },
     {
       title: 'Desarrollo con React js',
-      href: '/service/service-details'
+      href: '/service/service-details',
     },
-  ]
+  ];
 
   return (
     <footer className="cs-fooer">
@@ -45,30 +48,26 @@ export default function Footer({copyrightText, logoSrc, logoAlt, text}) {
           <Div className="row">
             <Div className="col-lg-3 col-sm-6">
               <Div className="cs-footer_item">
-                <TextWidget 
-                  logoSrc='/images/footer_logo.svg' 
-                  logoAlt='Logo'
-                  text ='Welcome to arino sed ut perspiciae omunde omnis iste natus error sitort voluptatem accusantium.'
-                />
-                <SocialWidget/>
+                <TextWidget logoSrc="ALPHATECH" logoAlt="Logo" text="Bienvenidos a Alphatech." />
+                <SocialWidget />
               </Div>
             </Div>
             <Div className="col-lg-3 col-sm-6">
               <Div className="cs-footer_item">
-                <MenuWidget menuItems={serviceMenu} menuHeading='Services'/>
+                <MenuWidget menuItems={serviceMenu} menuHeading="Services" />
               </Div>
             </Div>
             <Div className="col-lg-3 col-sm-6">
               <Div className="cs-footer_item">
-                <ContactInfoWidget title='Contactanos'/>
+                <ContactInfoWidget title="Contactanos" />
               </Div>
             </Div>
             <Div className="col-lg-3 col-sm-6">
               <Div className="cs-footer_item">
-                <Newsletter 
-                  title='Subscribe' 
-                  subtitle='At vero eos et accusamus et iusto odio as part dignissimos ducimus qui blandit.' 
-                  placeholder='example@gmail.com'
+                <Newsletter
+                  title="Subscribe"
+                  subtitle="At vero eos et accusamus et iusto odio as part dignissimos ducimus qui blandit."
+                  placeholder="example@gmail.com"
                 />
               </Div>
             </Div>
@@ -81,10 +80,17 @@ export default function Footer({copyrightText, logoSrc, logoAlt, text}) {
             <Div className="cs-copyright">Copyright © 2024 Alphatech Agencia.</Div>
           </Div>
           <Div className="cs-bottom_footer_right">
-            <MenuWidget menuItems={copyrightLinks} variant=' cs-style2'/>
+            <MenuWidget menuItems={copyrightLinks} variant="cs-style2" />
           </Div>
         </Div>
       </Div>
     </footer>
-  )
+  );
 }
+
+Footer.propTypes = {
+  copyrightText: PropTypes.string,
+  logoSrc: PropTypes.string,
+  logoAlt: PropTypes.string,
+  text: PropTypes.string,
+};
